@@ -11,10 +11,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
-        <activity android:name=".RegularActivity"></activity>
-        <activity android:name=".PersonalDayActivity" />
+        <activity android:name=".MakarActivity"></activity>
+        <activity android:name=".KarwaActivity" />
+        <activity android:name=".GaneshActivity" />
+        <activity android:name=".NavratriActivity" />
+        <activity android:name=".BhaiActivity" />
+        <activity android:name=".RakshaActivity" />
+        <activity android:name=".InternationalActivity" />
+        <activity android:name=".MemorableDayActivity" />
         <activity android:name=".ReligiousDayActivity" />
-        <activity android:name=".OccassionalDayActivity" />
+        <activity android:name=".SpecialEventsActivity" />
         <activity android:name=".FavouritesActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>

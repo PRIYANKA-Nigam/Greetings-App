@@ -4,14 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/customborder"
     tools:context=".ReligiousDayActivity">
-    <TextView
-        android:id="@+id/textView4"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:text="Rakshabhandhan,Bhai duj,Lohri ,Navaratri,Basant Panchami,
-Makar Sankranti,Gadesh Chaturthi" />
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/raksha" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/bhai" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/navratri" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/makar" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/karwa" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c6"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/ganesh" />
+    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

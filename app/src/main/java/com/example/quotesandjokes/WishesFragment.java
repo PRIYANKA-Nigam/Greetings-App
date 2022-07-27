@@ -54,7 +54,7 @@ public class WishesFragment extends Fragment {
         i2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(),PersonalDayActivity.class));
+                startActivity(new Intent(getContext(), MemorableDayActivity.class));
             }
         });
         TextDrawable td2 = TextDrawable.builder().beginConfig()
@@ -66,7 +66,7 @@ public class WishesFragment extends Fragment {
         i3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(),RegularActivity.class));
+                startActivity(new Intent(getContext(), InternationalActivity.class));
             }
         });
         TextDrawable td4 = TextDrawable.builder().beginConfig()
@@ -78,7 +78,7 @@ public class WishesFragment extends Fragment {
         i4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(),OccassionalDayActivity.class));
+                startActivity(new Intent(getContext(), SpecialEventsActivity.class));
             }
         });
         return view;

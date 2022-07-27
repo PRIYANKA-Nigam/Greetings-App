@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -33,6 +34,55 @@ import java.util.Set;
 public class QuotesFavActivity extends AppCompatActivity { String fileName="",filePath="",fileContent ="";
     ListView listView; ArrayList<String> arrayList =new ArrayList<>();
     ArrayAdapter adapter;
+//    private ActionMode.Callback callback=new ActionMode.Callback() {
+//        @Override
+//        public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+//            MenuInflater inflater =actionMode.getMenuInflater();
+//            inflater.inflate(R.menu.delete_save_share,menu);
+//            return true;
+//        }
+//
+//        @Override
+//        public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+//            return false;
+//        }
+//
+//        @Override
+//        public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {
+//            switch (menuItem.getItemId()){
+//                case R.id.delete:
+//                    DaleteFav();
+//                    actionMode.finish();
+//                    return true;
+//                case R.id.save:
+//                    SaveFav();
+//                    actionMode.finish();
+//                    return true;
+//                case R.id.share:
+//                    ShareFav();
+//                    actionMode.finish();
+//                    return true;
+//                default:
+//                    return false;
+//            }
+//
+//        }
+//
+//        @Override
+//        public void onDestroyActionMode(ActionMode actionMode) {
+//actionMode=null;
+//        }
+//    };
+//
+//    private void ShareFav() {
+//    }
+//
+//    private void SaveFav() {
+//    }
+//
+//    private void DaleteFav() {
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

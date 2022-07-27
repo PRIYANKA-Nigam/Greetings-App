@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout=findViewById(R.id.tab);
         viewPager=findViewById(R.id.vv);
         adapter=new MyFragmentAdapter(getSupportFragmentManager());
-        adapter.AddFragment(new QuotesFragment(),"Quote");
-        adapter.AddFragment(new JokesFragment(),"Joke");
         adapter.AddFragment(new WishesFragment(),"Wish");
         adapter.AddFragment(new SloganFragment(),"Slogan");
+        adapter.AddFragment(new QuotesFragment(),"Quote");
+        adapter.AddFragment(new JokesFragment(),"Joke");
+
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }

@@ -1,14 +1,17 @@
 package com.example.quotesandjokes;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-public class OccassionalDayActivity extends AppCompatActivity {
+import com.google.android.material.tabs.TabLayout;
 
+public class MemorableDayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_occassional_day);
+        setContentView(R.layout.activity_memorable_day);
+
     }
 }
