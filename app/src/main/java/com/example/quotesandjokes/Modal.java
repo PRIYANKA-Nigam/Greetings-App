@@ -4,22 +4,11 @@ package com.example.quotesandjokes;
 
 public class Modal {
     private String name;
-    private int image;
+    private String name2;
 
-
-    public Modal(String name, int image) {
+    public Modal(String name, String name2) {
         this.name = name;
-        this.image =image;
-    }
-
-
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
+        this.name2 = name2;
     }
 
     public String getName() {
@@ -28,5 +17,13 @@ public class Modal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName2() {
+        return name2;
+    }
+
+    public void setName2(String name2) {
+        this.name2 = name2;
     }
 }

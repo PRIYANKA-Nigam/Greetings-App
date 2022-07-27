@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.quotesandjokes">
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
-        <activity android:name=".FavouritesActivity"></activity>
+        <activity android:name=".RegularActivity"></activity>
+        <activity android:name=".PersonalDayActivity" />
+        <activity android:name=".ReligiousDayActivity" />
+        <activity android:name=".OccassionalDayActivity" />
+        <activity android:name=".FavouritesActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +29,7 @@
         <activity
             android:name=".MainActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
-            android:supportsPictureInPicture="true">
-
-        </activity>
+            android:supportsPictureInPicture="true" />
     </application>
 
 </manifest>

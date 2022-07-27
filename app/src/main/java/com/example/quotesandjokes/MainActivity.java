@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.AddFragment(new JokesFragment(),"Joke");
         adapter.AddFragment(new WishesFragment(),"Wish");
         adapter.AddFragment(new SloganFragment(),"Slogan");
-        adapter.AddFragment(new BlessingFragment(),"Blessing");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
     }
