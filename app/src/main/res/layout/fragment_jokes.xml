@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A91000"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".JokesFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginTop="26dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="5dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100sp"
+            android:layout_gravity="end"
+            android:src="@drawable/fav_black" />
+
+        <TextView
+            android:id="@+id/tt"
+            android:layout_width="380dp"
+            android:layout_height="458dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:text="See Funny Jokes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="140dp"
+            android:layout_height="77dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="200dp"
+            android:text="NEXT"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

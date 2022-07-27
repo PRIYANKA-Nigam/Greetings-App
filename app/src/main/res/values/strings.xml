@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quotes And Jokes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="quotes1">Stay Hungary .Stay Foolish</string>
+    <string name="quotes2">Cries in Vain</string>
+    <string name="quotes3">Shout like a wolf</string>
+    <string name="quotes4">Ill spent , ill gone</string>
+    <string name="quotes5">Time and Tide waits for none</string>
+    <string name="quotes6">Barking dogs seldom bites</string>
+    <string name="quotes7">Stay Hungary .Stay Foolish</string>
+    <string name="quotes8">Cries in wilderness</string>
+    <string name="joke1">Work is done  done  done</string>
+    <string name="joke2">Brain is mighter than Ox</string>
+    <string name="joke3">Cries in wilderness</string>
+    <string name="joke4">Barking dogs seldom bites</string>
+    <string name="joke5">Stay Hungary .Stay Foolish</string>
+    <string name="joke"><u>Saved Jokes</u></string>
+    <string name="quote"><u>Saved Quotes</u></string>
+    <string name="dark"><u>Toggle Up the Switch to Apply Theme</u></string>
+    <string name="home"><u>Jokes and Quotes Repository</u></string>
+    <string name="favourites"><u>Favourites</u></string>
+</resources>

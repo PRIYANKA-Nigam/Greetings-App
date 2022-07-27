@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAAFBA"
+    tools:context=".SplashScreenActivity">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@drawable/customborder">
+
+           <TextView
+               android:id="@+id/th"
+               android:layout_width="384dp"
+               android:layout_height="202dp"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginEnd="17dp"
+               android:layout_marginBottom="267dp"
+               android:gravity="center"
+               android:shadowColor="@android:color/holo_orange_light"
+               android:shadowDx="-15"
+               android:shadowDy="-15"
+               android:shadowRadius="13"
+               android:text="@string/home"
+               android:textSize="50dp"
+               android:textStyle="bold" />
+
+           <ImageView
+               android:id="@+id/imageView2"
+               android:layout_width="386dp"
+               android:layout_height="209dp"
+               app:srcCompat="@drawable/wishes" />
+
+           <ImageView
+               android:id="@+id/imageView3"
+               android:layout_width="184dp"
+               android:layout_height="216dp"
+               android:layout_alignParentStart="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginStart="11dp"
+               android:layout_marginBottom="16dp"
+               app:srcCompat="@drawable/laughing" />
+
+           <ImageView
+               android:id="@+id/imageView4"
+               android:layout_width="175dp"
+               android:layout_height="192dp"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentBottom="true"
+               android:layout_marginEnd="19dp"
+               android:layout_marginBottom="17dp"
+               app:srcCompat="@drawable/mic" />
+
+       </RelativeLayout>
+</RelativeLayout>

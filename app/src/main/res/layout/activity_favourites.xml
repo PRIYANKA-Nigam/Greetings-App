@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavouritesActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:text="@string/favourites"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="60dp"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="-15"
+        android:shadowDy="-15"
+        android:shadowRadius="13"
+      />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:padding="15dp"
+            android:src="@drawable/quotes" />
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:padding="4dp"
+            android:text="Favourite Quotes"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circle2"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:padding="15dp"
+            android:src="@drawable/jokes" />
+
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Favourite Jokes"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
