@@ -5,12 +5,70 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MemorableDayActivity">
-    <TextView
-        android:id="@+id/textView4"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:gravity="center"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:text="Valentine day,Mother,Father ,Brother,Sister" />
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/valentine" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/friend" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/father" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/mother" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c5"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/brother" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@android:color/black"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/c6"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="15dp"
+                android:src="@drawable/sister" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

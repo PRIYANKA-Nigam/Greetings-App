@@ -20,4 +20,8 @@
     <string name="dark"><u>Toggle Up the Switch to Apply Theme</u></string>
     <string name="home"><u>Jokes and Quotes Repository</u></string>
     <string name="favourites"><u>Favourites</u></string>
+    <string name="special_events_favourites"><u>Special Events Favourites</u></string>
+    <string name="religious_events_favourites"><u>Religious Events Favourites</u></string>
+    <string name="memorable_events_favourites"><u>Memorable Events Favourites</u></string>
+    <string name="international_events_favourites"><u>International Events Favourites</u></string>
 </resources>
