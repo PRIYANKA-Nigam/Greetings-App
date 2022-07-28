@@ -91,7 +91,7 @@ public class SpecialEventsFavActivity extends AppCompatActivity { String fileNam
                     }
                 });
                 AlertDialog alert = a.create();
-                alert.setTitle("Save or Share this Wish");
+                alert.setTitle("Save/Share this Wish");
                 alert.show();
             }
         });

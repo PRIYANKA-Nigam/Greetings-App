@@ -13,45 +13,45 @@
 
            <TextView
                android:id="@+id/th"
-               android:layout_width="384dp"
-               android:layout_height="202dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
                android:layout_alignParentEnd="true"
                android:layout_alignParentBottom="true"
                android:layout_marginEnd="17dp"
-               android:layout_marginBottom="267dp"
+               android:layout_marginBottom="275dp"
                android:gravity="center"
                android:shadowColor="@android:color/holo_orange_light"
                android:shadowDx="-15"
                android:shadowDy="-15"
                android:shadowRadius="13"
                android:text="@string/home"
-               android:textSize="50dp"
+               android:textSize="60dp"
                android:textStyle="bold" />
 
            <ImageView
                android:id="@+id/imageView2"
-               android:layout_width="386dp"
-               android:layout_height="209dp"
+               android:layout_width="401dp"
+               android:layout_height="235dp"
                app:srcCompat="@drawable/wishes" />
 
            <ImageView
                android:id="@+id/imageView3"
-               android:layout_width="184dp"
-               android:layout_height="216dp"
+               android:layout_width="221dp"
+               android:layout_height="289dp"
                android:layout_alignParentStart="true"
                android:layout_alignParentBottom="true"
-               android:layout_marginStart="11dp"
-               android:layout_marginBottom="16dp"
+               android:layout_marginStart="195dp"
+               android:layout_marginBottom="22dp"
                app:srcCompat="@drawable/laughing" />
 
            <ImageView
                android:id="@+id/imageView4"
-               android:layout_width="175dp"
-               android:layout_height="192dp"
+               android:layout_width="249dp"
+               android:layout_height="wrap_content"
                android:layout_alignParentEnd="true"
                android:layout_alignParentBottom="true"
-               android:layout_marginEnd="19dp"
-               android:layout_marginBottom="17dp"
+               android:layout_marginEnd="152dp"
+               android:layout_marginBottom="6dp"
                app:srcCompat="@drawable/mic" />
 
        </RelativeLayout>

@@ -26,10 +26,10 @@
             android:layout_width="380dp"
             android:layout_height="458dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:text="See Funny Jokes"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="35dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <Button

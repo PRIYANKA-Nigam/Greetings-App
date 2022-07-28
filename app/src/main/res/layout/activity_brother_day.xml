@@ -14,4 +14,13 @@
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="40sp"/>
+    <ListView
+        android:id="@+id/ll"
+        android:layout_width="376dp"
+        android:layout_height="568dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" />
 </RelativeLayout>

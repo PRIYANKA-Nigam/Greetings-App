@@ -83,7 +83,7 @@ TextView textView; Button button;  ImageView imageView;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int r =random.nextInt((5+1)-1)+1;
+                int r =random.nextInt((10+1)-1)+1;
                 String randQuotes="";
                 switch (r){
                     case 1: randQuotes=getString(R.string.joke1); break;
@@ -91,6 +91,11 @@ TextView textView; Button button;  ImageView imageView;
                     case 3: randQuotes=getString(R.string.joke3); break;
                     case 4: randQuotes=getString(R.string.joke4); break;
                     case 5: randQuotes=getString(R.string.joke5); break;
+                    case 6: randQuotes=getString(R.string.joke6); break;
+                    case 7: randQuotes=getString(R.string.joke7); break;
+                    case 8: randQuotes=getString(R.string.joke8); break;
+                    case 9: randQuotes=getString(R.string.joke9); break;
+                    case 10: randQuotes=getString(R.string.joke10); break;
                 }
                 textView.setText(randQuotes);
             }

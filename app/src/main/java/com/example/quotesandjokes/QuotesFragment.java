@@ -84,7 +84,7 @@ public class QuotesFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int r =random.nextInt((5+1)-1)+1;
+                int r =random.nextInt((10+1)-1)+1;
                 String randQuotes="";
                 switch (r){
                     case 1: randQuotes=getString(R.string.quotes1); break;
@@ -92,6 +92,11 @@ public class QuotesFragment extends Fragment {
                     case 3: randQuotes=getString(R.string.quotes3); break;
                     case 4: randQuotes=getString(R.string.quotes4); break;
                     case 5: randQuotes=getString(R.string.quotes5); break;
+                    case 6: randQuotes=getString(R.string.quotes6); break;
+                    case 7: randQuotes=getString(R.string.quotes7); break;
+                    case 8: randQuotes=getString(R.string.quotes8); break;
+                    case 9: randQuotes=getString(R.string.quotes9); break;
+                    case 10: randQuotes=getString(R.string.quotes10); break;
                 }
                 textView.setText(randQuotes);
             }

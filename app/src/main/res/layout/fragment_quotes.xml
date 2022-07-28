@@ -27,8 +27,9 @@
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:text="Check Riveting Quotes"
+            android:gravity="start"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="35dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
 
         <Button
