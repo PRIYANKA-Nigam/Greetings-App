@@ -57,15 +57,11 @@ arrayList.add("“Every day I feel so lucky to call you my Mom.“I’m so proud
                 a.setMessage("do you want to Save or Share this Wish ?....").setCancelable(true)
                         .setPositiveButton("Share", new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
+                            public void onClick(DialogInterface dialogInterface, int i) { String flag="mo";
                                 String s = arrayList.get(position);
-                                Intent sendIntent = new Intent();
-                                sendIntent.setAction(Intent.ACTION_SEND);
-                                sendIntent.putExtra(Intent.EXTRA_TEXT, "Good Wish : " + s);
-                                sendIntent.setType("text/plain");
-                                Intent shareIntent = Intent.createChooser(sendIntent, null);
-                                startActivity(shareIntent);
-                                Toast.makeText(getApplicationContext(), "Sharing Wish ...", Toast.LENGTH_SHORT).show();
+                                Intent intent=new Intent(getApplicationContext(),ShareActivity.class);
+                                intent.putExtra("img",s);intent.putExtra("flag",flag);
+                                startActivity(intent);
                             }
                         })
                         .setNeutralButton("Save", new DialogInterface.OnClickListener() {

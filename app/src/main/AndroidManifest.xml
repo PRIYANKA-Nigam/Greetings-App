@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
+        <activity android:name=".ShareDrawableActivity"></activity>
+        <activity android:name=".ShareTextActivity" />
+        <activity android:name=".ShareActivity" />
         <activity android:name=".SisterDayActivity" />
         <activity android:name=".BrotherDayActivity" />
         <activity android:name=".MotherDayActivity" />

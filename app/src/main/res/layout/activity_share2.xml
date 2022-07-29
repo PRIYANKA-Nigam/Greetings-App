@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShareActivity">
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="110dp"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="SHARE WISH" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="shareText"
+        android:text="SHARE AS TEXT"
+        android:textSize="25dp" />
+
+    <Button
+        android:layout_width="195dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:onClick="shareDrawable"
+        android:text="SHARE AS DRAWABLE"
+        android:textSize="25dp" />
+</FrameLayout>
