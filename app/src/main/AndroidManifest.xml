@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
-        <activity android:name=".SisterDayActivity"></activity>
+        <activity android:name=".SisterDayActivity" />
         <activity android:name=".BrotherDayActivity" />
         <activity android:name=".MotherDayActivity" />
         <activity android:name=".FatherDayActivity" />
