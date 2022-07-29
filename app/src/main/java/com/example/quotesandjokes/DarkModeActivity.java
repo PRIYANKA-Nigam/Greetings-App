@@ -12,7 +12,7 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 
 public class DarkModeActivity extends AppCompatActivity {
-    CardView cardView; Switch aSwitch;
+    Switch aSwitch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
@@ -22,7 +22,6 @@ public class DarkModeActivity extends AppCompatActivity {
         }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dark_mode);
-        cardView =findViewById(R.id.cdd);
         aSwitch=findViewById(R.id.swit);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

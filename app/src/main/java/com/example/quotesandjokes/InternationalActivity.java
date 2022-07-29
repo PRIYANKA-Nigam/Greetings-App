@@ -1,9 +1,14 @@
 package com.example.quotesandjokes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -25,5 +30,23 @@ public class InternationalActivity extends AppCompatActivity {
         adapter.AddFragment(new NewYearFragment(),"New Year");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater=getMenuInflater();
+        menuInflater.inflate(R.menu.dark_home,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId()==R.id.dark) {
+            startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));return true;
+        }
+        if (item.getItemId()==R.id.home){
+            startActivity(new Intent(getApplicationContext(),MainActivity.class));return true;
+        }
+        return  false;
     }
 }

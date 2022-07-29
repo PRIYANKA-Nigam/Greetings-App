@@ -75,24 +75,6 @@ public class InternationalEventsFavActivity extends AppCompatActivity {
                 alert.show();
             }
         });
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-//                new AlertDialog.Builder(InternationalEventsFavActivity.this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Are You Sure?")
-//                        .setMessage("Do You Want to delete this Wish").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        arrayList.remove(position);
-//                        adapter.notifyDataSetChanged();
-//                        SharedPreferences sh = getApplicationContext().getSharedPreferences("International", Context.MODE_PRIVATE);
-//                        HashSet<String> set = new HashSet<>(arrayList);
-//                        sh.edit().putStringSet("event", set).apply();
-//                        Toast.makeText(getApplicationContext(), "Deleted this Wish ,Now please Save again ...", Toast.LENGTH_SHORT).show();
-//                    }
-//                }).setNegativeButton("No", null).show();
-//                return true;
-//            }
-//        });
         try {
             loadData();
         } catch (NullPointerException e) {
