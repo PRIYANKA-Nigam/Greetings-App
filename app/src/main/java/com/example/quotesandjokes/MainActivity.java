@@ -1,5 +1,6 @@
 package com.example.quotesandjokes;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -13,6 +14,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -50,7 +54,21 @@ public class MainActivity extends AppCompatActivity {
     public void onUserLeaveHint () {
         PictureInPictureParams pictureInPictureParams= new PictureInPictureParams.Builder().build();
         enterPictureInPictureMode(pictureInPictureParams);
-
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater=getMenuInflater();
+        menuInflater.inflate(R.menu.dark_mode,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        super.onOptionsItemSelected(item);
+        if (item.getItemId()==R.id.dark) {
+            startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));return true;
+        }
+        return false;
+    }
 }

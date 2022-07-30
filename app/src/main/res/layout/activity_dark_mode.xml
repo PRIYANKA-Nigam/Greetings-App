@@ -13,6 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="-15"
+        android:shadowDy="-15"
+        android:shadowRadius="13"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="36dp" />
 
@@ -24,9 +28,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="100dp"
         android:text="Enable Dark Theme"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="-15"
+        android:shadowDy="-15"
+        android:shadowRadius="13"
         android:textSize="25dp"
         android:gravity="center"
-        android:textColor="?attr/secondaryTextColor"
+        android:textColor="?attr/primaryTextColor"
         android:textStyle="bold" />
 
 

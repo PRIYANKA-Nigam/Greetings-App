@@ -10,6 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:text="@string/special_events_favourites"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="-15"
+        android:shadowDy="-15"
+        android:shadowRadius="13"
         android:gravity="center"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -22,6 +26,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="15dp"
+        android:background="@android:color/holo_orange_light"
         android:divider="?android:dividerHorizontal"
         android:dividerHeight="10dp"
         android:showDividers="beginning|middle|end" />

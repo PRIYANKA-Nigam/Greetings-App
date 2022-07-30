@@ -11,6 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="146dp"
         android:text="RakshaBandhan"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:shadowDx="-15"
+        android:shadowDy="-15"
+        android:shadowRadius="13"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="40sp"/>

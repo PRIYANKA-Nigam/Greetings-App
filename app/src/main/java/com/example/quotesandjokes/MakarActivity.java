@@ -93,7 +93,7 @@ arrayList.add(" On this Makar Sankranti may the Sun God bless you with love, pro
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.fav_icon,menu);
+        menuInflater.inflate(R.menu.dark_fav,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -108,6 +108,8 @@ arrayList.add(" On this Makar Sankranti may the Sun God bless you with love, pro
                 intent.putStringArrayListExtra("quote", arrayList);
                 Toast.makeText(getApplicationContext(),"Displaying in Favourite List ...",Toast.LENGTH_SHORT).show();
                 startActivity(intent); break;
+            case R.id.dark:
+                startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));break;
         }
         return super.onOptionsItemSelected(item);
     }

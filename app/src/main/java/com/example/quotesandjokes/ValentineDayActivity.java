@@ -91,7 +91,7 @@ public class ValentineDayActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.fav_icon,menu);
+        menuInflater.inflate(R.menu.dark_fav,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -102,10 +102,12 @@ public class ValentineDayActivity extends AppCompatActivity {
                 SharedPreferences sh=  getApplicationContext().getSharedPreferences("wish", Context.MODE_PRIVATE);
                 Set<String> set = sh.getStringSet("wished", new HashSet<String>());
                 ArrayList<String> arrayList =new ArrayList<>(set);
-                Intent intent=new Intent(getApplicationContext(), MemorableEventFavActivity.class);
+                Intent intent=new Intent(getApplicationContext(), ReligiousEventsFavActivity.class);
                 intent.putStringArrayListExtra("quote", arrayList);
                 Toast.makeText(getApplicationContext(),"Displaying in Favourite List ...",Toast.LENGTH_SHORT).show();
                 startActivity(intent); break;
+            case R.id.dark:
+                startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));break;
         }
         return super.onOptionsItemSelected(item);
     }
