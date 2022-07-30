@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,7 +20,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,23 +27,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BirthDayFragment extends Fragment { String fileName="",filePath="",fileContent ="";
+public class OldPersonFragment extends Fragment { String fileName="",fileContent ="";
     ListView listView; ArrayList<String> arrayList;
     WishAdapter adapter;
-    public BirthDayFragment() {
+    public OldPersonFragment() {
     }
 
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);   fileName = "wishes.txt";
-        setHasOptionsMenu(true);
-        arrayList=new ArrayList<>();
-        arrayList.add("Happy Birthday To You");arrayList.add("Happy 24th Birthday To You");
-        arrayList.add("Wishing you a Happiest Birthday");arrayList.add("Many-Many Happy return of the day");
-        arrayList.add("Wishing you many more candles to blow");arrayList.add("Happy Aloha Birthday");
-        arrayList.add("Happy Level Up Day");
-    }
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -67,9 +54,28 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
         return super.onOptionsItemSelected(item);
     }
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        fileName = "wishes.txt";
+        setHasOptionsMenu(true);
+        arrayList=new ArrayList<>();
+        arrayList.add("Wishing you good health and a long life messages.");
+        arrayList.add("May God bless you with good health and long life. So many lives are tied to yours; you are a channel of blessing. May your will to live this life to the fullest never die.");
+        arrayList.add("May your life's journey be blessed and accurate with divine health that leads to happiness forever.");
+        arrayList.add("May God bless you every day with great happiness and good health.");
+        arrayList.add("May you live so long that your wisdom tells of your age. I pray you enjoy the latter part of your life in perfect health and peace of mind.");
+        arrayList.add("wish you good health and sincere happiness.hope you find renewed vigour every day!");
+        arrayList.add("May God bless you with Healthy Life");
+        arrayList.add("Wishing your health go safe and sound");arrayList.add("May Almighty be with you all the time and keep your body enriched");
+        arrayList.add("Hope you stay fit and fine");
+
+
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view= inflater.inflate(R.layout.fragment_birth_day, container, false);
+       View view= inflater.inflate(R.layout.fragment_old_person, container, false);
         listView=view.findViewById(R.id.ll);
         adapter=new WishAdapter(getContext(),arrayList);
         listView.setAdapter(adapter);
@@ -80,7 +86,7 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                 a.setMessage("do you want to Save or Share this Wish ?....").setCancelable(true)
                         .setPositiveButton("Share", new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i) { String flag="bi";
+                            public void onClick(DialogInterface dialogInterface, int i) { String flag="old";
                                 String s = arrayList.get(position);
                                 Intent intent=new Intent(getContext(),ShareActivity.class);
                                 intent.putExtra("img",s);intent.putExtra("flag",flag);

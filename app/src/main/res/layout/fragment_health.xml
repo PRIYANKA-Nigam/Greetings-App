@@ -5,36 +5,44 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HealthFragment">
-
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="570dp"
-        android:layout_marginTop="26dp"
-        app:cardCornerRadius="60dp"
-        app:cardElevation="5dp">
-        <TableRow
-            android:id="@+id/tr1"
+        android:layout_height="wrap_content"
+        android:id="@+id/ap"
+        android:background="@android:color/white">
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/j1"
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/tab_in"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/v1">
+    </androidx.viewpager.widget.ViewPager>
+    <TableRow
+        android:id="@+id/tr1"
+        android:layout_marginTop="70dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/textspace1"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:gravity="center_horizontal">
-            <TextView
-                android:id="@+id/textspace1"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:background="@android:color/darker_gray"
-                android:text="Wishes for Health and well-being"/>
-        </TableRow>
-        <ListView
-            android:id="@+id/ll"
-            android:layout_width="393dp"
-            android:layout_height="486dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="65dp" />
-
-    </androidx.cardview.widget.CardView>
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="@android:color/darker_gray"
+            android:text="Wishes on Health and well-being"/>
+    </TableRow>
 
 </FrameLayout>

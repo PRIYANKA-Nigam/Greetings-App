@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,23 +28,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BirthDayFragment extends Fragment { String fileName="",filePath="",fileContent ="";
+public class JobPromotionFragment extends Fragment { String fileName="",fileContent ="";
     ListView listView; ArrayList<String> arrayList;
     WishAdapter adapter;
-    public BirthDayFragment() {
+    public JobPromotionFragment() {
     }
 
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);   fileName = "wishes.txt";
-        setHasOptionsMenu(true);
-        arrayList=new ArrayList<>();
-        arrayList.add("Happy Birthday To You");arrayList.add("Happy 24th Birthday To You");
-        arrayList.add("Wishing you a Happiest Birthday");arrayList.add("Many-Many Happy return of the day");
-        arrayList.add("Wishing you many more candles to blow");arrayList.add("Happy Aloha Birthday");
-        arrayList.add("Happy Level Up Day");
-    }
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
@@ -66,10 +54,27 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);   fileName = "wishes.txt";
+        setHasOptionsMenu(true);
+        arrayList=new ArrayList<>();
+        arrayList.add("Well done for landing your amazing new role.");
+        arrayList.add("Well done on your new role! I know you’re going to do great.");
+        arrayList.add("You did it! Congrats on the new role, you’re going to do great.");
+        arrayList.add("I’d wish you good luck in your new role, but you don’t need it – you have GOT this!");
+        arrayList.add("“Congratulations on your well-deserved success.”");
+        arrayList.add("“Warmest congratulations on your achievement.”");
+        arrayList.add("“Congratulations and best wishes for your next adventure!”");
+        arrayList.add("“Sincere congratulations on your hard-earned success.”");
+        arrayList.add("My Heartfelt felicitations to you on your promotion");
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view= inflater.inflate(R.layout.fragment_birth_day, container, false);
+       View view= inflater.inflate(R.layout.fragment_job_promotion, container, false);
         listView=view.findViewById(R.id.ll);
         adapter=new WishAdapter(getContext(),arrayList);
         listView.setAdapter(adapter);
@@ -80,7 +85,7 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                 a.setMessage("do you want to Save or Share this Wish ?....").setCancelable(true)
                         .setPositiveButton("Share", new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i) { String flag="bi";
+                            public void onClick(DialogInterface dialogInterface, int i) { String flag="pr";
                                 String s = arrayList.get(position);
                                 Intent intent=new Intent(getContext(),ShareActivity.class);
                                 intent.putExtra("img",s);intent.putExtra("flag",flag);
@@ -99,6 +104,28 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                         } catch (IOException e) {
                             e.printStackTrace(); }
 
+//                        if (!isExternalStorageAvailableForRW()) {
+//                            Toast.makeText(getContext(), "Sorry U don't have sdcard mounted on your device", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            String s = arrayList.get(position);
+//                            fileContent = s;
+//                            if (!fileContent.equals("")) {
+//                                File file = new File(getContext().getExternalFilesDir(filePath), fileName);
+//                                FileOutputStream fileOutputStream = null;
+//                                try {
+//                                    fileOutputStream = new FileOutputStream(file);
+//                                    fileOutputStream.write(fileContent.getBytes());
+//                                } catch (FileNotFoundException fileNotFoundException) {
+//                                    fileNotFoundException.printStackTrace();
+//                                } catch (IOException ioException) {
+//                                    ioException.printStackTrace();
+//                                }
+//                                Toast.makeText(getContext(), "Wish Saved to SD Card", Toast.LENGTH_SHORT).show();
+//                            } else {
+//                                Toast.makeText(getContext(), "Text Field can not be Empty", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+
                     }
                 });
                 AlertDialog alert = a.create();
@@ -106,6 +133,6 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                 alert.show();
             }
         });
-       return view;
+       return  view;
     }
 }

@@ -75,24 +75,6 @@ public class MemorableEventFavActivity extends AppCompatActivity {
                 alert.show();
             }
         });
-//        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-//                new AlertDialog.Builder(MemorableEventFavActivity.this).setIcon(android.R.drawable.ic_dialog_alert).setTitle("Are You Sure?")
-//                        .setMessage("Do You Want to delete this Wish").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        arrayList.remove(position);
-//                        adapter.notifyDataSetChanged();
-//                        SharedPreferences sh = getApplicationContext().getSharedPreferences("memorable", Context.MODE_PRIVATE);
-//                        HashSet<String> set = new HashSet<>(arrayList);
-//                        sh.edit().putStringSet("event", set).apply();
-//                        Toast.makeText(getApplicationContext(), "Deleted this Wish ,Now please Save again ...", Toast.LENGTH_SHORT).show();
-//                    }
-//                }).setNegativeButton("No", null).show();
-//                return true;
-//            }
-//        });
         try {
             loadData();
         } catch (NullPointerException e) {
@@ -132,25 +114,17 @@ public class MemorableEventFavActivity extends AppCompatActivity {
 
     }
     public void savedLogic(String s){
-        if (!isExternalStorageAvailableForRW()) {
-            Toast.makeText(getApplicationContext(), "Sorry U don't have sdcard mounted on your device", Toast.LENGTH_SHORT).show();
-        } else {
-            if (!fileContent.equals("")) {
-                File file = new File(getExternalFilesDir(filePath), fileName);
-                FileOutputStream fileOutputStream = null;
-                try {
-                    fileOutputStream = new FileOutputStream(file);
-                    fileOutputStream.write(fileContent.getBytes());
-                } catch (FileNotFoundException fileNotFoundException) {
-                    fileNotFoundException.printStackTrace();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
-                Toast.makeText(MemorableEventFavActivity.this, "Quote Saved to SD Card", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(MemorableEventFavActivity.this, "Text Field can not be Empty", Toast.LENGTH_SHORT).show();
-            }
-        }
+         fileContent = s;
+        FileOutputStream fileOutputStream;
+        try { fileOutputStream=openFileOutput(fileName, Context.MODE_PRIVATE); fileOutputStream.write(fileContent.getBytes());
+            fileOutputStream.close();
+            Toast.makeText(getApplicationContext(),fileName + " Data Saved",Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace(); }
+
+
     }
     private void loadData() {
         SharedPreferences sh = getSharedPreferences("memorable", MODE_PRIVATE);

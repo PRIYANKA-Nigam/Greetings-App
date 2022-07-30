@@ -37,7 +37,7 @@ public class DiwaliFragment extends Fragment {
     }
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);   fileName = "wishes.txt";
         setHasOptionsMenu(true);
         arrayList=new ArrayList<>();
         arrayList.add("Have a happy and safe Diwali.");arrayList.add("Have a fun and festive Diwali!");
@@ -94,27 +94,16 @@ public class DiwaliFragment extends Fragment {
                         }).setNeutralButton("Save", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        if (!isExternalStorageAvailableForRW()) {
-                            Toast.makeText(getContext(), "Sorry U don't have sdcard mounted on your device", Toast.LENGTH_SHORT).show();
-                        } else {
-                            String s = arrayList.get(position);
-                            fileContent = s;
-                            if (!fileContent.equals("")) {
-                                File file = new File(getContext().getExternalFilesDir(filePath), fileName);
-                                FileOutputStream fileOutputStream = null;
-                                try {
-                                    fileOutputStream = new FileOutputStream(file);
-                                    fileOutputStream.write(fileContent.getBytes());
-                                } catch (FileNotFoundException fileNotFoundException) {
-                                    fileNotFoundException.printStackTrace();
-                                } catch (IOException ioException) {
-                                    ioException.printStackTrace();
-                                }
-                                Toast.makeText(getContext(), "Wish Saved to SD Card", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(getContext(), "Text Field can not be Empty", Toast.LENGTH_SHORT).show();
-                            }
-                        }
+                        String s = arrayList.get(position); fileContent = s;
+                        FileOutputStream fileOutputStream;
+                        try { fileOutputStream=getContext().openFileOutput(fileName, Context.MODE_PRIVATE); fileOutputStream.write(fileContent.getBytes());
+                            fileOutputStream.close();
+                            Toast.makeText(getContext(),fileName + " Data Saved",Toast.LENGTH_LONG).show();
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        } catch (IOException e) {
+                            e.printStackTrace(); }
+
 
                     }
                 });
@@ -125,6 +114,5 @@ public class DiwaliFragment extends Fragment {
         });
         return view;
     }
-    private boolean isExternalStorageAvailableForRW() { String extState= Environment.getExternalStorageState();
-        if (extState.equals(Environment.MEDIA_MOUNTED)){ return true; } return false; }
+
 }

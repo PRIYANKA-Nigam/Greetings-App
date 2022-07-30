@@ -70,6 +70,18 @@ public class ShareDrawableActivity extends AppCompatActivity {
                 imageView.setImageDrawable(getResources().getDrawable(R.drawable.holi));break;
             case "ch":
                 imageView.setImageDrawable(getResources().getDrawable(R.drawable.christmas));break;
+            case "pr":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.job1));break;
+            case "fi":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.job2));break;
+            case "job":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.job3));break;
+            case "sick":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.sick));break;
+            case "old":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.healthy));break;
+            case "baby":
+                imageView.setImageDrawable(getResources().getDrawable(R.drawable.baby));break;
         }
         textView.setText(s);
     }

@@ -131,25 +131,15 @@ public class SpecialEventsFavActivity extends AppCompatActivity { String fileNam
 
     }
     public void savedLogic(String s){
-        if (!isExternalStorageAvailableForRW()) {
-            Toast.makeText(getApplicationContext(), "Sorry U don't have sdcard mounted on your device", Toast.LENGTH_SHORT).show();
-        } else {
-            if (!fileContent.equals("")) {
-                File file = new File(getExternalFilesDir(filePath), fileName);
-                FileOutputStream fileOutputStream = null;
-                try {
-                    fileOutputStream = new FileOutputStream(file);
-                    fileOutputStream.write(fileContent.getBytes());
-                } catch (FileNotFoundException fileNotFoundException) {
-                    fileNotFoundException.printStackTrace();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
-                }
-                Toast.makeText(SpecialEventsFavActivity.this, "Quote Saved to SD Card", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(SpecialEventsFavActivity.this, "Text Field can not be Empty", Toast.LENGTH_SHORT).show();
-            }
-        }
+        fileContent = s;
+        FileOutputStream fileOutputStream;
+        try { fileOutputStream=openFileOutput(fileName, Context.MODE_PRIVATE); fileOutputStream.write(fileContent.getBytes());
+            fileOutputStream.close();
+            Toast.makeText(getApplicationContext(),fileName + " Data Saved",Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace(); }
     }
     private void loadData() {
         SharedPreferences sh = getSharedPreferences("special", MODE_PRIVATE);

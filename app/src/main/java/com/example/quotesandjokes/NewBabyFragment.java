@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,7 +20,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,22 +27,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class BirthDayFragment extends Fragment { String fileName="",filePath="",fileContent ="";
+public class NewBabyFragment extends Fragment { String fileName="",fileContent ="";
     ListView listView; ArrayList<String> arrayList;
     WishAdapter adapter;
-    public BirthDayFragment() {
-    }
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);   fileName = "wishes.txt";
-        setHasOptionsMenu(true);
-        arrayList=new ArrayList<>();
-        arrayList.add("Happy Birthday To You");arrayList.add("Happy 24th Birthday To You");
-        arrayList.add("Wishing you a Happiest Birthday");arrayList.add("Many-Many Happy return of the day");
-        arrayList.add("Wishing you many more candles to blow");arrayList.add("Happy Aloha Birthday");
-        arrayList.add("Happy Level Up Day");
+    public NewBabyFragment() {
     }
     @Override
     public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
@@ -66,10 +52,28 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        fileName = "wishes.txt";
+        setHasOptionsMenu(true);
+        arrayList=new ArrayList<>();
+        arrayList.add("“Congratulations! So thrilled to hear the news.”");
+        arrayList.add("“May your baby be blessed with good health, love and laughter. Congratulations!”");
+        arrayList.add(" ““Congratulations! You are a mommy now!” Now is the time to enjoy your baby’s little feet and baby smell. So happy for you!”");
+        arrayList.add("“Congratulations on becoming parents for the first time!” “Parenthood is a life-changing phase. May you cherish each and every moment of it with your baby.”");
+        arrayList.add("“Congratulations on becoming new parents! We are always here for babysitting.”");
+        arrayList.add(" “There is nothing sweeter than the smell of your baby’s breath, happy coos, and gentle kisses. Congratulations on your happy bundle!”");
+        arrayList.add("“Sending loads of love to the little baby and wishing you all the happiness.”");
+        arrayList.add(" “Congratulations to the proud mamma and papa!”");
+        arrayList.add(" “Congratulations on the new addition to your family! Wishing the three of you all the best.”");
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view= inflater.inflate(R.layout.fragment_birth_day, container, false);
+      View view= inflater.inflate(R.layout.fragment_new_baby, container, false);
         listView=view.findViewById(R.id.ll);
         adapter=new WishAdapter(getContext(),arrayList);
         listView.setAdapter(adapter);
@@ -80,7 +84,7 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                 a.setMessage("do you want to Save or Share this Wish ?....").setCancelable(true)
                         .setPositiveButton("Share", new DialogInterface.OnClickListener() {
                             @Override
-                            public void onClick(DialogInterface dialogInterface, int i) { String flag="bi";
+                            public void onClick(DialogInterface dialogInterface, int i) { String flag="baby";
                                 String s = arrayList.get(position);
                                 Intent intent=new Intent(getContext(),ShareActivity.class);
                                 intent.putExtra("img",s);intent.putExtra("flag",flag);
@@ -106,6 +110,6 @@ public class BirthDayFragment extends Fragment { String fileName="",filePath="",
                 alert.show();
             }
         });
-       return view;
+      return view;
     }
 }

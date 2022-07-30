@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".JobPromotionFragment">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:layout_marginTop="75dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="5dp">
+        <ListView
+            android:id="@+id/ll"
+            android:layout_width="393dp"
+            android:layout_height="486dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="65dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
