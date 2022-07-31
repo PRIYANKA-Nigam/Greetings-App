@@ -25,6 +25,7 @@
         android:id="@+id/ll"
         android:layout_width="367dp"
         android:layout_height="597dp"
+        android:background="@android:color/holo_orange_light"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="15dp"

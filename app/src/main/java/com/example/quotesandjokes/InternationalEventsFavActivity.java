@@ -137,14 +137,14 @@ public class InternationalEventsFavActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {
         MenuInflater menuInflater =getMenuInflater();
-        menuInflater.inflate(R.menu.fav_icon,menu);
+        menuInflater.inflate(R.menu.save,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.fav:
+            case R.id.save:
                 SharedPreferences sh=getApplicationContext().getSharedPreferences("International",MODE_PRIVATE);
                 HashSet<String> set=new HashSet<>(arrayList);
                 sh.edit().putStringSet("event",set).apply();

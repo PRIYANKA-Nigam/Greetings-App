@@ -69,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId()==R.id.dark) {
             startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));return true;
         }
+        if (item.getItemId()==R.id.qr) {
+            startActivity(new Intent(getApplicationContext(),ShareQRActivity.class));return true;
+        }
         return false;
     }
 }

@@ -5,4 +5,8 @@
         android:title="Enable Dark Mode"
         android:icon="@drawable/dark"
         app:showAsAction="always"/>
+    <item android:id="@+id/qr"
+        android:title="Enable Dark Mode"
+        android:icon="@drawable/qr_code"
+        app:showAsAction="always"/>
 </menu>
