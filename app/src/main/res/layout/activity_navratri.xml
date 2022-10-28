@@ -9,7 +9,7 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="146dp"
-        android:text="Navaratri"
+        android:text="@string/navaratri_greetings"
         android:shadowColor="@android:color/holo_orange_light"
         android:shadowDx="-15"
         android:shadowDy="-15"

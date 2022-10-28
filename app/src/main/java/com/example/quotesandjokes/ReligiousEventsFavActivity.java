@@ -105,7 +105,7 @@ public class ReligiousEventsFavActivity extends AppCompatActivity {String fileNa
     public void sharedLogic(String s){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Interesting Quote : " + s);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, " -- " + s);
         sendIntent.setType("text/plain");
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);

@@ -16,7 +16,7 @@ String s="";
         s=intent.getStringExtra("text");
                            Intent sendIntent = new Intent();
                                 sendIntent.setAction(Intent.ACTION_SEND);
-                                sendIntent.putExtra(Intent.EXTRA_TEXT, "Good Wish : " + s);
+                                sendIntent.putExtra(Intent.EXTRA_TEXT, " -- " + s);
                                 sendIntent.setType("text/plain");
                                 Intent shareIntent = Intent.createChooser(sendIntent, null);
                                 startActivity(shareIntent);
