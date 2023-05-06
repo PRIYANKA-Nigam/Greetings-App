@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     android:id="@+id/qdraw"
-    tools:context=".QuotesFavActivity">
+    tools:context=".Quote.QuotesFavActivity">
     <TextView
         android:id="@+id/t"
         android:layout_width="match_parent"

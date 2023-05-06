@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="5dp"
     android:id="@+id/jdraw"
-    tools:context=".JokesFavActivity">
+    tools:context=".Joke.JokesFavActivity">
     <TextView
         android:id="@+id/t"
         android:layout_width="match_parent"

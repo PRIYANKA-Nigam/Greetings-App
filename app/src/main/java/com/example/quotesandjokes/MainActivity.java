@@ -1,24 +1,23 @@
 package com.example.quotesandjokes;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.PictureInPictureParams;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.quotesandjokes.Favourite.FavouritesActivity;
+import com.example.quotesandjokes.Joke.JokesFragment;
+import com.example.quotesandjokes.Quote.QuotesFragment;
+import com.example.quotesandjokes.Share.ShareQRActivity;
+import com.example.quotesandjokes.Slogan.SloganFragment;
+import com.example.quotesandjokes.Wish.WishesFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-         startActivity(new Intent(MainActivity.this,FavouritesActivity.class));
+         startActivity(new Intent(MainActivity.this, FavouritesActivity.class));
             }
         });
         tabLayout=findViewById(R.id.tab);
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),DarkModeActivity.class));return true;
         }
         if (item.getItemId()==R.id.qr) {
-            startActivity(new Intent(getApplicationContext(),ShareQRActivity.class));return true;
+            startActivity(new Intent(getApplicationContext(), ShareQRActivity.class));return true;
         }
         return false;
     }

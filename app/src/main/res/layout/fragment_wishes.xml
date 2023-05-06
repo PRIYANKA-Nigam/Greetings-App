@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#A91000"
-    tools:context=".WishesFragment">
+    tools:context=".Wish.WishesFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

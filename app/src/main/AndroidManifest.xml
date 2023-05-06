@@ -9,34 +9,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
         <activity
-            android:name=".ShareQRActivity"
+            android:name=".Share.ShareQRActivity"
             android:label="@string/title_activity_share_q_r">
         </activity>
 
-        <activity android:name=".ShareDrawableActivity" />
-        <activity android:name=".ShareTextActivity" />
-        <activity android:name=".ShareActivity" />
-        <activity android:name=".SisterDayActivity" />
-        <activity android:name=".BrotherDayActivity" />
-        <activity android:name=".MotherDayActivity" />
-        <activity android:name=".FatherDayActivity" />
-        <activity android:name=".FriendDayActivity" />
-        <activity android:name=".ValentineDayActivity" />
-        <activity android:name=".MemorableEventFavActivity" />
-        <activity android:name=".InternationalEventsFavActivity" />
-        <activity android:name=".ReligiousEventsFavActivity" />
-        <activity android:name=".SpecialEventsFavActivity" />
-        <activity android:name=".MakarActivity" />
-        <activity android:name=".KarwaActivity" />
-        <activity android:name=".GaneshActivity" />
-        <activity android:name=".NavratriActivity" />
-        <activity android:name=".BhaiActivity" />
-        <activity android:name=".RakshaActivity" />
-        <activity android:name=".InternationalActivity" />
-        <activity android:name=".MemorableDayActivity" />
-        <activity android:name=".ReligiousDayActivity" />
-        <activity android:name=".SpecialEventsActivity" />
-        <activity android:name=".FavouritesActivity" />
+        <activity android:name=".Share.ShareDrawableActivity" />
+        <activity android:name=".Share.ShareTextActivity" />
+        <activity android:name=".Share.ShareActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.SisterDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.BrotherDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.MotherDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.FatherDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.FriendDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.ValentineDayActivity" />
+        <activity android:name=".Favourite.MemorableEventFavActivity" />
+        <activity android:name=".Favourite.InternationalEventsFavActivity" />
+        <activity android:name=".Favourite.ReligiousEventsFavActivity" />
+        <activity android:name=".Favourite.SpecialEventsFavActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.MakarActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.KarwaActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.GaneshActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.NavratriActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.BhaiActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.RakshaActivity" />
+        <activity android:name=".Wish.NationalSpecialEvents.InternationalNationalEvents.InternationalActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.MemorableEvents.MemorableDayActivity" />
+        <activity android:name=".Wish.ReligiousMemorableEvents.ReligiousEvents.ReligiousDayActivity" />
+        <activity android:name=".Wish.NationalSpecialEvents.SpecialEvents.SpecialEventsActivity" />
+        <activity android:name=".Favourite.FavouritesActivity" />
         <activity android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
@@ -46,8 +46,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DarkModeActivity" />
-        <activity android:name=".JokesFavActivity" />
-        <activity android:name=".QuotesFavActivity" />
+        <activity android:name=".Joke.JokesFavActivity" />
+        <activity android:name=".Quote.QuotesFavActivity" />
         <activity
             android:name=".MainActivity"
             android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation"
